@@ -18,5 +18,5 @@ git commit -a -m "Opiates"
 git format-patch master --ignore-space-change
 git checkout Opiates
 git branch -D temp
-move /y 0001-Opiates.patch %opiates-dir%\Minecraft Patch\minecraft.patch
+move /y 0001-Opiates.patch %opiates-dir%\Patch\Minecraft.patch
 rem pause
