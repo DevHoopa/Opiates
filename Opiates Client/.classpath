@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="minecraft"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/authlib-1.5.22.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/codecjorbis-20101023.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/codecwav-20101023.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/commons-compress-1.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/guava-17.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/httpclient-4.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/icu4j-core-mojang-51.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/jinput-2.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/jinput-platform-2.0.5-natives-windows.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/jna-3.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/jopt-simple-4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/jutils-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/libraryjavasound-20101123.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/librarylwjglopenal-20100824.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/log4j-api-2.0-beta9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/log4j-core-2.0-beta9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/lwjgl_util-2.9.4-nightly-20150209.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/lwjgl-2.9.4-nightly-20150209.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9-natives"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/netty-all-4.0.23.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/oshi-core-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/realms-1.8.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hexeption/Desktop/Hacked Clients/Workspace/1.9 Libs/soundsystem-20120107.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
