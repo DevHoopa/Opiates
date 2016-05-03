@@ -43,6 +43,12 @@ public class OpiatesMainMenu extends GuiMainMenu {
 	@Override
 	protected void actionPerformed(GuiButton button) throws IOException {
 		super.actionPerformed(button);
+		switch (button.id)
+        {
+            case 14:
+            	//Add Alt Manager
+                break;
+        }
 	}
 
 	@Override

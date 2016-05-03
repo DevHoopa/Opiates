@@ -1,25 +1,37 @@
-From 4b463a1759f1f44dba7f863db9eb92ce64469081 Mon Sep 17 00:00:00 2001
+From 26c141ce5212027fb8c6c6b8c4a33a43403737f4 Mon Sep 17 00:00:00 2001
 From: Hexeption <minecraftfun201@gmail.com>
-Date: Tue, 3 May 2016 16:44:05 +0100
+Date: Tue, 3 May 2016 16:51:26 +0100
 Subject: [PATCH] Opiates
 
 ---
- src/net/minecraft/client/gui/GuiMainMenu.java | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ src/net/minecraft/client/gui/GuiMainMenu.java | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
 
 diff --git a/src/net/minecraft/client/gui/GuiMainMenu.java b/src/net/minecraft/client/gui/GuiMainMenu.java
-index f2657bb..97d75b4 100644
+index 97d75b4..d105870 100644
 --- a/src/net/minecraft/client/gui/GuiMainMenu.java
 +++ b/src/net/minecraft/client/gui/GuiMainMenu.java
-@@ -488,7 +488,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
-     /**
-      * Renders the skybox in the main menu
-      */
--    private void renderSkybox(int p_73971_1_, int p_73971_2_, float p_73971_3_)
-+    protected void renderSkybox(int p_73971_1_, int p_73971_2_, float p_73971_3_)
+@@ -254,7 +254,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
      {
-         this.mc.getFramebuffer().unbindFramebuffer();
-         GlStateManager.viewport(0, 0, 256, 256);
+         this.buttonList.add(new GuiButton(1, this.width / 2 - 100, p_73969_1_, I18n.format("menu.singleplayer", new Object[0])));
+         this.buttonList.add(new GuiButton(2, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 1, I18n.format("menu.multiplayer", new Object[0])));
+-        this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
++        this.buttonList.add(new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, "Alt Manager"));
+     }
+ 
+     /**
+@@ -298,11 +298,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
+             this.mc.displayGuiScreen(new GuiMultiplayer(this));
+         }
+ 
+-        if (button.id == 14 && this.realmsButton.visible)
+-        {
+-            this.switchToRealms();
+-        }
+-
+         if (button.id == 4)
+         {
+             this.mc.shutdown();
 -- 
 2.8.0.windows.1
 
