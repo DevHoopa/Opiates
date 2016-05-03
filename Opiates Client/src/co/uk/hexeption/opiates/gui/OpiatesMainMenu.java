@@ -74,9 +74,9 @@ public class OpiatesMainMenu extends GuiMainMenu {
 		drawString(fontRendererObj, MinecraftCopyright, width - fontRendererObj.getStringWidth(MinecraftCopyright) - 5, this.height - 19, Color.white.getRGB());
 		drawString(fontRendererObj, MinecraftCopyright2, width - fontRendererObj.getStringWidth(MinecraftCopyright2) - 5, this.height - 9, Color.white.getRGB());
 
-		drawString(fontRendererObj, MinecraftVersion, 5, this.height - 29, Color.white.getRGB());
-		drawString(fontRendererObj, MinecraftCopyright, 5, this.height - 19, Color.white.getRGB());
-		drawString(fontRendererObj, MinecraftCopyright2, 5, this.height - 9, Color.white.getRGB());
+		drawString(fontRendererObj, OpiatesVersion, 5, this.height - 29, Color.white.getRGB());
+		drawString(fontRendererObj, OpiatesCopyright, 5, this.height - 19, Color.white.getRGB());
+		drawString(fontRendererObj, OpiatesCopyright2, 5, this.height - 9, Color.white.getRGB());
 		
 		for(Object button : buttonList){
 			((GuiButton) button).drawButton(mc, mouseX, mouseY);
