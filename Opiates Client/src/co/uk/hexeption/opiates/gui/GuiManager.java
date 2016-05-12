@@ -59,7 +59,6 @@ import net.minecraft.client.Minecraft;
  */
 public final class GuiManager extends AbstractGuiManager {
 	
-	public static String EspList;
 	private class ModuleFrame extends BasicFrame {
 		private ModuleFrame() {
 		}
@@ -73,7 +72,6 @@ public final class GuiManager extends AbstractGuiManager {
 
 	public GuiManager() {
 		setup = new AtomicBoolean();
-		EspList = "Player";
 	}
 
 	@Override
@@ -83,7 +81,6 @@ public final class GuiManager extends AbstractGuiManager {
 		
 		createTestFrame();
 		createValuesFrame();
-		ESPFrame();
 
 		final Map<Category, ModuleFrame> categoryFrames = new HashMap<Category, ModuleFrame>();
 		for (Module module : ModuleManager.getModules()) {
@@ -194,7 +191,7 @@ public final class GuiManager extends AbstractGuiManager {
 		Theme theme = getTheme();
 		Frame testFrame = new BasicFrame("Theme Manager");
 		testFrame.setTheme(theme);
-		ComboBox comboBox = new BasicComboBox("Simple Theme", "Cryton Theme");
+		ComboBox comboBox = new BasicComboBox("Simple Theme", "Opiates Theme");
 		comboBox.addComboBoxListener(new ComboBoxListener() {
 			
 			@Override
@@ -225,44 +222,6 @@ public final class GuiManager extends AbstractGuiManager {
 		testFrame.setMinimized(true);
 		addFrame(testFrame);
 	}
-	
-	private void ESPFrame() {
-		Theme theme = getTheme();
-		Frame testFrame = new BasicFrame("Outline Esp Manager");
-		testFrame.setTheme(theme);
-		ComboBox comboBox = new BasicComboBox("Player Esp", "Hostal Mob Esp", "Animals Esp" );
-		comboBox.addComboBoxListener(new ComboBoxListener() {
-
-			@Override
-			public void onComboBoxSelectionChanged(ComboBox comboBox) {
-				
-				switch(comboBox.getSelectedIndex()) {
-				case 0:
-					EspList = "Player";
-					return;
-				case 1:
-					EspList = "Mob";
-					return;
-				case 2:
-					EspList = "Animals";
-					return;
-
-				}
-			}
-		});
-		testFrame.add(comboBox);
-		testFrame.setX(50);
-		testFrame.setY(50);
-		Dimension defaultDimension = theme.getUIForComponent(testFrame).getDefaultSize(testFrame);
-		testFrame.setWidth(defaultDimension.width);
-		testFrame.setHeight(defaultDimension.height);
-		testFrame.setVisible(true);
-		testFrame.setClosable(false);
-		testFrame.setMinimized(true);
-		addFrame(testFrame);
-	}
-
-	
 
 	@Override
 	protected void resizeComponents() {
