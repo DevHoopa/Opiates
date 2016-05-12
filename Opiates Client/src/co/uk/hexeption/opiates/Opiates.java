@@ -20,11 +20,14 @@ package co.uk.hexeption.opiates;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.darkstorm.minecraft.gui.theme.simple.SimpleTheme;
+import org.darkstorm.minecraft.gui.util.GuiManagerDisplayScreen;
 import org.lwjgl.input.Keyboard;
 
 import co.uk.hexeption.opiates.event.api.EventManager;
 import co.uk.hexeption.opiates.event.api.EventTarget;
 import co.uk.hexeption.opiates.event.events.EventKeyboard;
+import co.uk.hexeption.opiates.gui.GuiManager;
 import co.uk.hexeption.opiates.module.Module;
 import co.uk.hexeption.opiates.module.ModuleManager;
 import co.uk.hexeption.opiates.wrapper.Wrapper;
@@ -38,6 +41,9 @@ public class Opiates {
 	public static Opiates	Client_Instance = new Opiates();
 	
 	private static ModuleManager moduleManager = new ModuleManager();
+	
+	private static GuiManagerDisplayScreen gui;
+	private static GuiManager guiManager;
 
 	public void startClient() {
 		logger.log(Level.DEBUG, "Loading " + Client_Name);
@@ -63,6 +69,24 @@ public class Opiates {
 			}
 		}
 	}
+	
+	public GuiManager getGuiManager(){
+		if(guiManager == null){
+			guiManager = new GuiManager();
+			guiManager.setTheme(new SimpleTheme());
+			guiManager.setup();
+			guiManager.update();
+		}
+		return guiManager;
+	}
+	
+	public GuiManagerDisplayScreen getGui(){
+		if(gui == null){
+			gui = new GuiManagerDisplayScreen(getGuiManager());
+		}
+		return gui;
+	}
+
 
 	public static String getClient_Name() {
 		return Client_Name;

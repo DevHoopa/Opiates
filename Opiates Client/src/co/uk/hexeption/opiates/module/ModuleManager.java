@@ -20,8 +20,9 @@ package co.uk.hexeption.opiates.module;
 
 import java.util.ArrayList;
 
+import co.uk.hexeption.opiates.module.modules.hud.Gui;
 import co.uk.hexeption.opiates.module.modules.hud.Hud;
-import co.uk.hexeption.opiates.module.modules.hud.Step;
+import co.uk.hexeption.opiates.module.modules.movement.Step;
 
 public class ModuleManager {
 	
@@ -30,14 +31,15 @@ public class ModuleManager {
 	public ModuleManager(){
 		activeModules.add(new Hud());
 		activeModules.add(new Step());
+		activeModules.add(new Gui());
 	}
 	
-	public ArrayList<Module> getModule(){
+	public static ArrayList<Module> getModules(){
 		return activeModules;
 	}
 	
 	public Module getModule(Class<? extends Module> clazz){
-		for(Module mod: getModule()){
+		for(Module mod: getModules()){
 			if(mod.getClass() == clazz){
 				return mod;
 			}

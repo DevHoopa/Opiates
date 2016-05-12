@@ -75,17 +75,16 @@ public class Module {
 
 	public void onToggle() {
 	}
-	
-	public void toggle()
-    {
-        setState(!this.getState());
-    }
+
+	public void toggle() {
+		setState(!this.getState());
+	}
 
 	public void onEnable() {
 		Random randomColor = new Random();
 		StringBuilder sb = new StringBuilder();
 		sb.append("0x");
-		while(sb.length() < 10){
+		while (sb.length() < 10) {
 			sb.append(Integer.toHexString(randomColor.nextInt()));
 		}
 		sb.setLength(8);
@@ -106,6 +105,12 @@ public class Module {
 			this.isEnabled = false;
 			EventManager.unregister(this);
 		}
+	}
+
+	public boolean isCategory(Category s) {
+		if (s == category)
+			return true;
+		return false;
 	}
 
 }

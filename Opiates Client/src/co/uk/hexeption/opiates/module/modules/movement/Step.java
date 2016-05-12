@@ -16,7 +16,7 @@
  *
  */
 
-package co.uk.hexeption.opiates.module.modules.hud;
+package co.uk.hexeption.opiates.module.modules.movement;
 
 import org.lwjgl.input.Keyboard;
 
