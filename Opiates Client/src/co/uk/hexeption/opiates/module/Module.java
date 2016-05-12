@@ -75,6 +75,11 @@ public class Module {
 
 	public void onToggle() {
 	}
+	
+	public void toggle()
+    {
+        setState(!this.getState());
+    }
 
 	public void onEnable() {
 		Random randomColor = new Random();

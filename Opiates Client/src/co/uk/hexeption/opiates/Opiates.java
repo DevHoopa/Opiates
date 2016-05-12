@@ -20,7 +20,12 @@ package co.uk.hexeption.opiates;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.input.Keyboard;
 
+import co.uk.hexeption.opiates.event.api.EventManager;
+import co.uk.hexeption.opiates.event.api.EventTarget;
+import co.uk.hexeption.opiates.event.events.EventKeyboard;
+import co.uk.hexeption.opiates.module.Module;
 import co.uk.hexeption.opiates.module.ModuleManager;
 import co.uk.hexeption.opiates.wrapper.Wrapper;
 
@@ -37,6 +42,7 @@ public class Opiates {
 	public void startClient() {
 		logger.log(Level.DEBUG, "Loading " + Client_Name);
 		logger.log(Level.DEBUG, "Made by " + Client_Creator);
+		EventManager.register(this);
 
 		// INIT
 		
@@ -47,6 +53,15 @@ public class Opiates {
 		}
 
 		logger.log(Level.DEBUG, "Finished loading " + Client_Name);
+	}
+	
+	@EventTarget
+	private void onEventKeyboard(EventKeyboard event){
+		for(Module mod: moduleManager.activeModules){
+			if(Keyboard.getEventKey() == mod.getBind()){
+				mod.toggle();
+			}
+		}
 	}
 
 	public static String getClient_Name() {

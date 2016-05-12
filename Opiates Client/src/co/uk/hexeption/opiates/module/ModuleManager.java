@@ -21,6 +21,7 @@ package co.uk.hexeption.opiates.module;
 import java.util.ArrayList;
 
 import co.uk.hexeption.opiates.module.modules.hud.Hud;
+import co.uk.hexeption.opiates.module.modules.hud.Step;
 
 public class ModuleManager {
 	
@@ -28,6 +29,7 @@ public class ModuleManager {
 	
 	public ModuleManager(){
 		activeModules.add(new Hud());
+		activeModules.add(new Step());
 	}
 	
 	public ArrayList<Module> getModule(){
