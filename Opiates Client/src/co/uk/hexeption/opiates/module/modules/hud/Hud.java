@@ -38,8 +38,7 @@ public class Hud extends Module{
 		String drawFPS = String.valueOf(Wrapper.getInstance().getMinecraft().getDebugFPS());
 		Wrapper.getInstance().getFontRenderer().drawString(Opiates.getClient_Name() + " §6[rel-" + Opiates.getClient_Version() + "]", 3, 2, 0xffffffff);
 		Wrapper.getInstance().getFontRenderer().drawString("FPS: §6" + drawFPS, 3, 14, 0xffffffff);
-
-		
+		renderArryList(sr);
 	}
 	
 	private static void renderArryList(ScaledResolution scaledResolution) {
