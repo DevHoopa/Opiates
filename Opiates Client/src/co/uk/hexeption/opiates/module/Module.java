@@ -18,6 +18,7 @@
 
 package co.uk.hexeption.opiates.module;
 
+import co.uk.hexeption.opiates.event.api.EventManager;
 import net.minecraft.client.Minecraft;
 
 public class Module {
@@ -84,9 +85,11 @@ public class Module {
 		if (state) {
 			this.onEnable();
 			this.isEnabled = true;
+			EventManager.register(this);
 		} else {
 			this.onDisable();
 			this.isEnabled = false;
+			EventManager.unregister(this);
 		}
 	}
 

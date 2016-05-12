@@ -20,12 +20,14 @@ package co.uk.hexeption.opiates.module;
 
 import java.util.ArrayList;
 
+import co.uk.hexeption.opiates.module.modules.hud.Hud;
+
 public class ModuleManager {
 	
 	public static ArrayList<Module> activeModules = new ArrayList<Module>();
 	
 	public ModuleManager(){
-		
+		activeModules.add(new Hud());
 	}
 	
 	public ArrayList<Module> getModule(){
@@ -39,6 +41,15 @@ public class ModuleManager {
 			}
 		}
 		return null;
+	}
+	
+	public void setModuleState(String modname, boolean state){
+		for(Module mod: activeModules){
+			if(mod.getName().equalsIgnoreCase(modname.trim())){
+				mod.setState(state);
+				return;
+			}
+		}
 	}
 
 }
