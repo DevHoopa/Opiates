@@ -1,5 +1,5 @@
 diff --git a/src/net/minecraft/client/Minecraft.java b/src/net/minecraft/client/Minecraft.java
-index 4b1041d..f27b2bb 100644
+index 4b1041d..1c3ed3a 100644
 --- a/src/net/minecraft/client/Minecraft.java
 +++ b/src/net/minecraft/client/Minecraft.java
 @@ -12,6 +12,9 @@ import com.mojang.authlib.GameProfileRepository;
@@ -12,6 +12,24 @@ index 4b1041d..f27b2bb 100644
  import java.awt.image.BufferedImage;
  import java.io.File;
  import java.io.IOException;
+@@ -213,7 +216,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
+     private ServerData currentServerData;
+ 
+     /** The RenderEngine instance used by Minecraft */
+-    private TextureManager renderEngine;
++    public TextureManager renderEngine;
+ 
+     /**
+      * Set to 'this' in Minecraft constructor; used by some settings get methods
+@@ -242,7 +245,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
+     private RenderItem renderItem;
+     private ItemRenderer itemRenderer;
+     public EntityPlayerSP thePlayer;
+-    private Entity renderViewEntity;
++    public Entity renderViewEntity;
+     public Entity pointedEntity;
+     public EffectRenderer effectRenderer;
+     private final Session session;
 @@ -588,11 +591,13 @@ public class Minecraft implements IThreadListener, ISnooperInfo
  
          if (this.serverName != null)
