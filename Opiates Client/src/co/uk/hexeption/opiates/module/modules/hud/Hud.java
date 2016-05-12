@@ -34,6 +34,10 @@ public class Hud extends Module{
 	
 	@EventTarget
 	private void onRender2D(EventRender2D event){
+		if(Wrapper.getInstance().getGameSettings().showDebugInfo){
+			return;
+		}
+		
 		ScaledResolution sr = new ScaledResolution(mc);
 		String drawFPS = String.valueOf(Wrapper.getInstance().getMinecraft().getDebugFPS());
 		Wrapper.getInstance().getFontRenderer().drawString(Opiates.getClient_Name() + " §6[rel-" + Opiates.getClient_Version() + "]", 3, 2, 0xffffffff);
@@ -42,7 +46,7 @@ public class Hud extends Module{
 	}
 	
 	private static void renderArryList(ScaledResolution scaledResolution) {
-		int yCount = 25;
+		int yCount = 5;
 		int right = scaledResolution.getScaledWidth() - 3;
 
 		for (Module m : Opiates.getInstance().getModuleManager().activeModules) {
