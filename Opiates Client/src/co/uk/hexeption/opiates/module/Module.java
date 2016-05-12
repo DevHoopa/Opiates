@@ -18,6 +18,8 @@
 
 package co.uk.hexeption.opiates.module;
 
+import java.util.Random;
+
 import co.uk.hexeption.opiates.event.api.EventManager;
 import net.minecraft.client.Minecraft;
 
@@ -75,6 +77,14 @@ public class Module {
 	}
 
 	public void onEnable() {
+		Random randomColor = new Random();
+		StringBuilder sb = new StringBuilder();
+		sb.append("0x");
+		while(sb.length() < 10){
+			sb.append(Integer.toHexString(randomColor.nextInt()));
+		}
+		sb.setLength(8);
+		this.color = Integer.decode(sb.toString()).intValue();
 	}
 
 	public void onDisable() {
