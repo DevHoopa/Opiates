@@ -1,3 +1,10 @@
+diff --git a/.gitignore b/.gitignore
+index ae3c172..2ee725a 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ /bin/
++src/assets/
 diff --git a/src/net/minecraft/client/Minecraft.java b/src/net/minecraft/client/Minecraft.java
 index 4b1041d..e308568 100644
 --- a/src/net/minecraft/client/Minecraft.java
