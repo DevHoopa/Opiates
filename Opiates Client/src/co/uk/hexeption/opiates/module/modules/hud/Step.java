@@ -34,7 +34,6 @@ public class Step extends Module{
 
 	@EventTarget
 	private void onUpdate(EventUpdate event){
-		System.out.println("Hi");
 		if(this.getState()){
 			Wrapper.getInstance().getPlayer().stepHeight = 2;
 		}else{
